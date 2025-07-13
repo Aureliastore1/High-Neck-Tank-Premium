@@ -176,15 +176,15 @@
         <div class="mt-6">
             <div class="flex justify-between items-center">
                 <h2 class="text-lg font-medium">Ukuran:</h2>
-                <button class="text-sm text-blue-600 font-medium">Panduan Ukuran</button>
+                <button class="text-sm text-blue-600 font-medium" onclick="document.getElementById('sizeGuideModal').classList.remove('hidden')">Panduan Ukuran</button>
             </div>
             <div class="grid grid-cols-3 gap-2 mt-2">
-                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium">XS</button>
-                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium">S</button>
-                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium bg-black text-white">M</button>
-                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium">L</button>
-                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium">XL</button>
-                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium">XXL</button>
+                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium hover:bg-gray-50 transition">XS</button>
+                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium hover:bg-gray-50 transition">S</button>
+                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium hover:bg-gray-50 transition">M</button>
+                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium hover:bg-gray-50 transition">L</button>
+                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium hover:bg-gray-50 transition">XL</button>
+                <button class="py-2 px-4 border border-gray-300 rounded-md text-center font-medium hover:bg-gray-50 transition">XXL</button>
             </div>
         </div>
 
@@ -606,6 +606,101 @@
         showSlide(0);
     </script>
 
+    <!-- Size Guide Modal -->
+    <div id="sizeGuideModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-xl max-w-md w-full mx-4 p-6 relative max-h-[80vh] overflow-y-auto">
+            <button onclick="document.getElementById('sizeGuideModal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="text-xl font-bold mb-4">Panduan Ukuran High Neck Tank Premium</h3>
+            
+            <div class="mb-6">
+                <h4 class="font-medium mb-2">Rekomendasi Ukuran:</h4>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <span><span class="font-medium">BB 40-55kg:</span> XS atau S</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <span><span class="font-medium">BB 55-70kg:</span> S atau M</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <span><span class="font-medium">BB 70-85kg:</span> M atau L</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <span><span class="font-medium">BB 85-100kg:</span> L atau XL</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                        <span><span class="font-medium">BB 100-110kg:</span> XL atau XXL</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h4 class="font-medium mb-2">Detail Ukuran (cm):</h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border p-2">Ukuran</th>
+                                <th class="border p-2">Lebar Dada</th>
+                                <th class="border p-2">Panjang</th>
+                                <th class="border p-2">Lebar Bahu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border p-2">XS</td>
+                                <td class="border p-2">42</td>
+                                <td class="border p-2">58</td>
+                                <td class="border p-2">36</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border p-2">S</td>
+                                <td class="border p-2">45</td>
+                                <td class="border p-2">60</td>
+                                <td class="border p-2">38</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">M</td>
+                                <td class="border p-2">48</td>
+                                <td class="border p-2">62</td>
+                                <td class="border p-2">40</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border p-2">L</td>
+                                <td class="border p-2">51</td>
+                                <td class="border p-2">64</td>
+                                <td class="border p-2">42</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">XL</td>
+                                <td class="border p-2">54</td>
+                                <td class="border p-2">66</td>
+                                <td class="border p-2">44</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border p-2">XXL</td>
+                                <td class="border p-2">57</td>
+                                <td class="border p-2">68</td>
+                                <td class="border p-2">46</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="text-sm text-gray-600">
+                <p class="mb-2"><i class="fas fa-info-circle text-blue-500 mr-1"></i> Ukuran dapat bervariasi ±1-2cm tergantung cara pengukuran.</p>
+                <p><i class="fas fa-info-circle text-blue-500 mr-1"></i> Untuk hasil terbaik, ukur baju favorit Anda dan bandingkan dengan tabel di atas.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Order Notification -->
     <div class="order-notification" id="orderNotification">
         <button class="close" id="closeNotification">&times;</button>
@@ -639,24 +734,31 @@
     </div>
 
     <script>
-        // Exit Intent Popup
-        document.addEventListener('mouseout', function(e) {
-            if (!e.toElement && !e.relatedTarget && e.clientY < 10) {
-                document.getElementById('exitPopup').classList.remove('hidden');
-            }
-        });
+        // Exit Intent Popup - Show only once per session
+        if (!localStorage.getItem('exitPopupShown')) {
+            document.addEventListener('mouseout', function(e) {
+                if (!e.toElement && !e.relatedTarget && e.clientY < 10) {
+                    document.getElementById('exitPopup').classList.remove('hidden');
+                    localStorage.setItem('exitPopupShown', 'true');
+                    // Remove event listener after showing once
+                    document.removeEventListener('mouseout', arguments.callee);
+                }
+            });
+        }
 
         document.getElementById('closeExitPopup').addEventListener('click', function() {
             document.getElementById('exitPopup').classList.add('hidden');
+            localStorage.setItem('exitPopupShown', 'true');
         });
 
         document.getElementById('stayOnPage').addEventListener('click', function() {
             document.getElementById('exitPopup').classList.add('hidden');
+            localStorage.setItem('exitPopupShown', 'true');
             document.getElementById('orderForm').scrollIntoView({ behavior: 'smooth' });
         });
 
         // Random order notification
-        const names = ['Budi', 'Siti', 'Ahmad', 'Dewi', 'Rudi', 'Ani', 'Eko', 'Rina'];
+        const names = ['Vania', 'Stephanie', 'Jessica', 'Michelle', 'Victoria', 'Natasha', 'Bianca', 'Claudia', 'Sabrina', 'Valentina'];
         const locations = ['Jakarta', 'Bandung', 'Surabaya', 'Medan', 'Makassar', 'Yogyakarta', 'Bali', 'Lombok'];
         
         function showRandomNotification() {
